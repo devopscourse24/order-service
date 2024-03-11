@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/orderdb  # URI de connexion MongoDB.
+      host: localhost  # Hôte de la base de données MongoDB.
+      port: 27017  # Port pour la connexion à la base de données MongoDB.
+      database: orderdb  # Nom de la base de données MongoDB.
+      repositories:
+        enabled: true  # Activation des repositories Spring Data MongoDB.

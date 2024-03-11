@@ -1,0 +1,44 @@
+### Add Order
+POST {{host}}/order/saveOrder
+Content-Type: application/json
+Accept: application/json
+
+{
+  "foodItemList": [
+    {
+      "id": 1,
+      "itemDescription": "Poulet mijoté avec des épices et des légumes dans un pot en terre",
+      "itemName": "Poulet Kedjenou",
+      "veg": false,
+      "price": 5000,
+      "restaurantId": 1,
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "itemDescription": "Salade de fruits de mer typique de la Côte d'Ivoire",
+      "itemName": "Garde Manger",
+      "veg": false,
+      "price": 4500,
+      "restaurantId": 1,
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "itemName": "Attieke Poisson",
+      "itemDescription": "Semoule de manioc avec poisson grillé et sauce tomate épicée",
+      "veg": false,
+      "price": 4000,
+      "restaurantId": 1,
+      "quantity": 0
+    }
+  ],
+  "restaurant": {
+    "id": 1,
+    "name": "Chez Antoinette",
+    "address": "Rue des Jardins, Cocody",
+    "city": "Abidjan",
+    "description": "Une expérience authentique de la cuisine ivoirienne avec une touche moderne"
+  },
+  "userId": 202
+}

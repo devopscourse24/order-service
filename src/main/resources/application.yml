@@ -1,0 +1,17 @@
+server:
+  port: 9094
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ORDER-SERVICE  # Nom de l'application Spring Boot utilisé principalement pour Eureka ou le cloud Spring.
+
+
+
+# Les éléments de configuration spécifiques à JPA/Hibernate et MySQL ont été retirés car ils ne sont pas applicables à MongoDB.

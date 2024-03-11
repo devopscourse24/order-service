@@ -1,0 +1,27 @@
+eureka:
+  instance:
+    # Indique à Eureka de préférer l'adresse IP de l'instance lors de l'enregistrement plutôt que son nom d'hôte.
+    preferIpAddress: true
+    # Définit le nom d'hôte de cette instance Eureka, qui sera utilisé lors de l'enregistrement avec le serveur Eureka.
+    hostname: eureka-0
+  client:
+    service-url:
+      # Cette configuration spécifie l'URL que les clients Eureka utiliseront pour s'enregistrer et localiser les services.
+      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/orderdb  # URI de connexion MongoDB.
+      # Mongo ATLAS Url: mongodb+srv://admin:elimane1991@elfn-db.qa6v8nz.mongodb.net/
+      host: localhost  # Hôte de la base de données MongoDB.
+      port: 27017  # Port pour la connexion à la base de données MongoDB.
+      database: orderdb  # Nom de la base de données MongoDB.
+      repositories:
+        enabled: true  # Activation des repositories Spring Data MongoDB.
+#  jpa:
+#    hibernate:
+#      ddl-auto: update  # Stratégie de gestion du schéma de base de données (ici, mise à jour sans détruire les données).
+#    show-sql: true  # Si true, Hibernate affiche les requêtes SQL dans les logs.
+#    database-platform: org.hibernate.dialect.MySQL8Dialect  # Dialecte spécifique pour MySQL avec moteur InnoDB.
