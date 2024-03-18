@@ -13,9 +13,9 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/orderdb  # URI de connexion MongoDB.
+      uri: mongodb+srv://admin:admin1991@elfn-db.qa6v8nz.mongodb.net/?retryWrites=true&w=majority&appName=elfn-db  # URI de connexion MongoDB.
       # Mongo ATLAS Url: mongodb+srv://admin:elimane1991@elfn-db.qa6v8nz.mongodb.net/
-      host: localhost  # Hôte de la base de données MongoDB.
+      host: elfn-db.qa6v8nz.mongodb.net  # Hôte de la base de données MongoDB.
       port: 27017  # Port pour la connexion à la base de données MongoDB.
       database: orderdb  # Nom de la base de données MongoDB.
       repositories:
